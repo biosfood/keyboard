@@ -1,0 +1,16 @@
+if EISENHAUER_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "EisenhauerKB"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if EISENHAUER_LEFT || EISENHAUER_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif

@@ -1,0 +1,5 @@
+config EISENHAUER_LEFT
+    def_bool $(shields_list_contains,eisenhauer_left)
+
+config EISENHAUER_RIGHT
+    def_bool $(shields_list_contains,eisenhauer_right)
