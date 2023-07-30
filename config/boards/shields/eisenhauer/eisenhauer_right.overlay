@@ -21,4 +21,3 @@
        , <&xiao_d 9  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
        ;
 };
-};
