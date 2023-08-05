@@ -34,7 +34,7 @@
 
         Controls_layer {
             bindings = <
-&none  &none          &kp PIPE           &none                 &none          &kp PLUS        &kp SEMICOLON              &kp COMMA          &kp DOT          &kp SLASH      &none  &none
+&none  &none          &kp PIPE           &none             &kp EQUAL          &kp PLUS        &kp SEMICOLON              &kp COMMA          &kp DOT          &kp SLASH      &none  &none
 &none  &none             &none    &kp QUESTION             &kp GRAVE  &kp SINGLE_QUOTE    &kp DOUBLE_QUOTES               &kp LEFT           &kp UP           &kp DOWN  &kp RIGHT  &none
 &none  &none  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS            &kp LT               &kp GT  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET      &none  &none
                                          &none               &kp TAB         &kp COLON                &none                  &none            &none
