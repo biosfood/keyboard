@@ -25,8 +25,8 @@
 
         Numbers_layer {
             bindings = <
- &none  &kp EXCLAMATION   &kp AT_SIGN      &kp HASH    &kp DOLLAR   &kp PERCENT       &kp CARET  &kp AMPERSAND  &kp ASTERISK     &kp MINUS         &none    &none
- &none     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0    &none
+ &none  &kp EXCLAMATION   &kp AT_SIGN      &kp HASH    &kp DOLLAR   &kp PERCENT       &kp CARET  &kp AMPERSAND  &kp ASTERISK     &kp MINUS     &kp UNDER    &none
+ &none     &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4    &kp NUMBER_5   &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9    &none
 &kp F1           &kp F2        &kp F3        &kp F4        &kp F5        &kp F6          &kp F7         &kp F8        &kp F9       &kp F10       &kp F11  &kp F12
                                               &none         &none         &none           &none          &none         &none
             >;
