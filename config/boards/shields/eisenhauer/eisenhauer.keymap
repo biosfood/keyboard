@@ -1,10 +1,12 @@
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 #define BASE 0
 #define NUMBERS 1
 #define CONTROLS 2
 #define QWERTY 3
+#define BLUE 4
 
 / {
     combos {
@@ -16,37 +18,46 @@
 
         Base_layer {
             bindings = <
-&kp ESCAPE     &kp ESCAPE  &kp LEFT_ALT  &kp LEFT_CONTROL      &kp P           &kp Y            &kp F       &kp G  &kp C  &kp R  &kp L   &tog 3
-   &kp TAB          &kp A         &kp O             &kp E      &kp U           &kp I            &kp D       &kp H  &kp T  &kp N  &kp S  &kp DEL
-     &none  &kp LEFT_META         &kp Q             &kp J      &kp K           &kp X            &kp B       &kp M  &kp W  &kp V  &kp Z  &kp DOT
-                                                    &mo 1  &kp SPACE  &kp LEFT_SHIFT    &kp BACKSPACE  &kp RETURN  &mo 2
+&kp ESCAPE    &kp ESCAPE  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp P      &kp Y             &kp F          &kp G       &kp C  &kp R  &kp L  &tog 3
+&kp TAB       &kp A       &kp O         &kp E             &kp U      &kp I             &kp D          &kp H       &kp T  &kp N  &kp S  &kp DEL
+&kp LEFT_GUI  &kp COMMA   &kp Q         &kp J             &kp K      &kp X             &kp B          &kp M       &kp W  &kp V  &kp Z  &kp DOT
+                                        &mo 1             &kp SPACE  &kp LEFT_SHIFT    &kp BACKSPACE  &kp RETURN  &mo 2
             >;
         };
 
         Numbers_layer {
             bindings = <
- &none  &kp EXCLAMATION   &kp AT_SIGN      &kp HASH    &kp DOLLAR   &kp PERCENT       &kp CARET  &kp AMPERSAND  &kp ASTERISK     &kp MINUS     &kp UNDER    &none
- &none     &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4    &kp NUMBER_5   &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9    &none
-&kp F1           &kp F2        &kp F3        &kp F4        &kp F5        &kp F6          &kp F7         &kp F8        &kp F9       &kp F10       &kp F11  &kp F12
-                                              &none         &none         &none           &none          &none         &none
+&none   &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT     &kp CARET     &kp AMPERSAND  &kp ASTERISK  &kp MINUS     &kp UNDER     &none
+&none   &kp NUMBER_0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4    &kp NUMBER_5  &kp NUMBER_6   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none
+&kp F1  &kp F2           &kp F3        &kp F4        &kp F5        &kp F6          &kp F7        &kp F8         &kp F9        &kp F10       &kp F11       &kp F12
+                                       &none         &none         &none           &none         &none          &mo 4
             >;
         };
 
         Controls_layer {
             bindings = <
-&none  &kp BACKSLASH          &kp PIPE       &kp TILDE             &kp EQUAL          &kp PLUS        &kp SEMICOLON              &kp COMMA          &kp DOT          &kp SLASH      &none  &none
-&none          &none             &none    &kp QUESTION             &kp GRAVE  &kp SINGLE_QUOTE    &kp DOUBLE_QUOTES               &kp LEFT           &kp UP           &kp DOWN  &kp RIGHT  &none
-&none          &none  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS            &kp LT               &kp GT  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET      &none  &none
-                                                 &none               &kp TAB         &kp COLON                &none                  &none            &none
+&none  &kp BACKSLASH  &kp PIPE          &kp TILDE       &kp EQUAL             &kp PLUS            &kp SEMICOLON      &kp COMMA              &kp DOT          &kp SLASH          &none      &none
+&none  &none          &none             &kp QUESTION    &kp GRAVE             &kp SINGLE_QUOTE    &kp DOUBLE_QUOTES  &kp LEFT               &kp UP           &kp DOWN           &kp RIGHT  &none
+&none  &none          &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp LT              &kp GT             &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &none      &none
+                                        &mo 4           &kp TAB               &kp COLON           &none              &none                  &none
             >;
         };
 
         QWERTY_layer {
             bindings = <
-      &kp ESCAPE  &kp Q  &kp W  &kp E      &kp R           &kp T            &kp Y      &kp U  &kp I      &kp O    &kp P        &tog 3
-  &kp LEFT_SHIFT  &kp A  &kp S  &kp D      &kp F           &kp G            &kp H      &kp J  &kp K      &kp L    &none         &none
-&kp LEFT_CONTROL  &kp Z  &kp X  &kp C      &kp V           &kp B            &kp N      &kp M  &none  &kp COMMA  &kp DOT  &kp LEFT_WIN
+&kp ESCAPE        &kp Q  &kp W  &kp E  &kp R      &kp T             &kp Y          &kp U      &kp I  &kp O      &kp P    &tog 3
+&kp LEFT_SHIFT    &kp A  &kp S  &kp D  &kp F      &kp G             &kp H          &kp J      &kp K  &kp L      &none    &none
+&kp LEFT_CONTROL  &kp Z  &kp X  &kp C  &kp V      &kp B             &kp N          &kp M      &none  &kp COMMA  &kp DOT  &kp LEFT_WIN
                                 &mo 1  &kp SPACE  &kp LEFT_SHIFT    &kp BACKSPACE  &kp ENTER  &mo 2
+            >;
+        };
+
+        BLUE_layer {
+            bindings = <
+&trans  &trans        &trans        &trans        &trans  &trans    &trans  &trans      &trans  &trans  &trans  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans    &trans  &bt BT_CLR  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans        &trans  &trans    &trans  &trans      &trans  &trans  &trans  &trans
+                                    &trans        &trans  &trans    &trans  &trans      &trans
             >;
         };
     };
