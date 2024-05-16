@@ -9,17 +9,26 @@
 #define BLUE 4
 
 / {
-    combos {
-        compatible = "zmk,combos";
-    };
+    combos { compatible = "zmk,combos"; };
 
-    chosen {
-      zmk,battery = &vbatt;
-    };
+    chosen { zmk,battery = &vbatt; };
 
     vbatt: vbatt {
         compatible = "zmk,battery-nrf-vddh";
         label = "VBATT";
+    };
+
+    macros {
+        Ae: Ae {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+              <&macro_press &kp LSHFT &kp LCTRL>,
+              <&macro_tap &kp U>,
+              <&macro_release &kp LSHFT &kp LCTRL>,
+              <&macro_tap &kp N0 &kp N0 &kp C &kp N4 &kp SPC>;
+            label = "Ae";
+        };
     };
 
     keymap {
@@ -63,9 +72,9 @@
 
         BLUE_layer {
             bindings = <
+&trans  &Ae           &trans        &trans        &trans  &trans    &trans  &trans      &trans  &trans  &trans  &trans
 &trans  &trans        &trans        &trans        &trans  &trans    &trans  &trans      &trans  &trans  &trans  &trans
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans    &trans  &bt BT_CLR  &trans  &trans  &trans  &trans
-&trans  &trans        &trans        &trans        &trans  &trans    &trans  &trans      &trans  &trans  &trans  &trans
                                     &trans        &trans  &trans    &trans  &trans      &trans
             >;
         };
